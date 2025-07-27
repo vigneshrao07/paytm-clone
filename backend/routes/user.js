@@ -32,7 +32,7 @@ router.post("/signup", async (req, res) => {
     });
   }
 
-  const dbUser = await user.create(body);
+  const dbUser = await User.create(body);
   const token = jwt.sign(
     {
       userId: dbUser._id,
